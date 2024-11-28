@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "3b98a851-3467-44a3-bd48-018fd66d9c93",
+		"name": "Generales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30332828",
+		"_collection_link": "https://solar-moon-561343.postman.co/workspace/BookingTech~3b249508-233e-4472-b308-cd8564404144/collection/25724421-3b98a851-3467-44a3-bd48-018fd66d9c93?action=share&source=collection_link&creator=30332828"
+	},
+	"item": [
+		{
+			"name": "getDistinctives",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/apiDistinctives",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"apiDistinctives"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monedas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/monedas",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"monedas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Promociones express",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/v2/promociones",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"v2",
+						"promociones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar contacto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name_contact\" : \"Pablo\",\r\n    \"lastname_contact\" : \"Ayala\",\r\n    \"email_contact\" : \"zonalibrecun@gmail.com\",\r\n    \"phone_contact\" : \"9981403214\",\r\n    \"message_contact\" : \"Quiero un tour\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/v2/website/enviarEmail",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"v2",
+						"website",
+						"enviarEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSlider",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/apiSlider",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"apiSlider"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGallery",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/apiGallery",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"apiGallery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyWebSiteInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/mywebsite",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"mywebsite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAffiliate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/affiliate?id=kjeldsew",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"affiliate"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "kjeldsew"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMegatravel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/megatravel",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"megatravel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validar Cupon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_servicio\" : 1,\r\n    \"email\" : \"zonalibrecun@gmail.com\",\r\n    \"total\": \"5890\",\r\n    \"cupon\": \"2023cu\",\r\n    \"telefono\": \"9981234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/v2/cupones/validar",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"v2",
+						"cupones",
+						"validar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cache",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/v2/cache",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"v2",
+						"cache"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

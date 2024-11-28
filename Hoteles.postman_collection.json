@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "7a6dde21-1679-43d7-a6f6-c58add86e7d9",
+		"name": "Hoteles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30332828",
+		"_collection_link": "https://solar-moon-561343.postman.co/workspace/BookingTech~3b249508-233e-4472-b308-cd8564404144/collection/25724421-7a6dde21-1679-43d7-a6f6-c58add86e7d9?action=share&source=collection_link&creator=30332828"
+	},
+	"item": [
+		{
+			"name": "keywordDestinationSearch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search\":\"cancun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/keywordDestinationSearch",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"keywordDestinationSearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getHotelsByRegion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"region_id\": 935,\r\n\t\"checkin\":\"2024-04-01\",\r\n\t\"checkout\":\"2024-04-02\",\r\n    \"currency\": \"MXN\",\r\n    \"language\": \"es\",\r\n    \"residency\": \"MX\",\r\n    \"guests\":[\r\n        {\r\n            \"adults\": 1,\r\n            \"children\":[]\r\n        }  \r\n    ],\r\n    \"sandbox\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/v2/hotelesRegion",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"v2",
+						"hotelesRegion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getHotelsHome",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/prices?tour=39&dias=1&fecha=2023-02-25",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"prices"
+					],
+					"query": [
+						{
+							"key": "tour",
+							"value": "39"
+						},
+						{
+							"key": "dias",
+							"value": "1"
+						},
+						{
+							"key": "fecha",
+							"value": "2023-02-25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getHotel",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"grand-royal-lagoon\",\r\n    \"checkin\": \"2024-02-18\",\r\n    \"checkout\": \"2024-02-21\",\r\n    \"adults\": 2,\r\n    \"menores\": 0,\r\n    \"ages\": null,\r\n    \"residency\":\"MX\",\r\n    \"currency\": \"MXN\",\r\n    \"sandbox\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/getHotel",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"getHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveHotelReservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"test\": \"uno\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/saveReservation",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"saveReservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValidaDataHotel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "20|zBev3uhkN3RToR6I9dQAC4fecZUh5YnKpZrCYyBa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/bookingtrapcrm/api/hotel/validaDataHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bookingtrapcrm",
+						"api",
+						"hotel",
+						"validaDataHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValidaDatosListaHoteles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"region_id\": 935,\r\n  \"checkin\": \"2023-10-25\",\r\n  \"checkout\": \"2023-10-27\",\r\n  \"currency\": \"MXN\",\r\n  \"residency\": \"MX\",\r\n  \"language\": \"es\",\r\n  \"guests\": [\r\n    {\r\n      \"adults\": 2,\r\n      \"children\": [\r\n        2,\r\n        5\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/hotel/validaHotelList",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"hotel",
+						"validaHotelList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarHoteles V2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"region_id\":\"935\",\r\n    \"checkin\":\"2024-02-01\",\r\n    \"checkout\":\"2024-02-03\",\r\n    \"currency\":\"MXN\",\r\n    \"adultos\":\"2\",\r\n    \"residency\":\"MX\",\r\n    \"language\":\"es\",\r\n    \"guests\":[{\"adults\":\"2\"}],\r\n    \"menores\":\"0\",\r\n    \"sandbox\":\"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/v2/hotelesRegion",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"v2",
+						"hotelesRegion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

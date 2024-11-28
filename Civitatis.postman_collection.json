@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "0a98fd0f-a0a3-4dae-bc46-21b5f4e528a0",
+		"name": "Civitatis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30332828",
+		"_collection_link": "https://solar-moon-561343.postman.co/workspace/BookingTech~3b249508-233e-4472-b308-cd8564404144/collection/25724421-0a98fd0f-a0a3-4dae-bc46-21b5f4e528a0?action=share&source=collection_link&creator=30332828"
+	},
+	"item": [
+		{
+			"name": "AddCartCivitatis",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"activityId\":\"1121\",\r\n\"date\":\"2024-01-20\",\r\n\"currency\":\"MXN\",\r\n\"time\":\"20:00\",\r\n\"rate\":{\r\n\t\"categories\":[\r\n           {\r\n              \"id\":\"0\",\r\n              \"quantity\":\"1\"\r\n           }\r\n        ],\r\n        \"id\":\"0\"\r\n},\r\n\"sandbox\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/reservation/tour/addCart",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"reservation",
+						"tour",
+						"addCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcivitatistour",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"164531\",\r\n    \"currency\": \"MXN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/getCivitatisTour",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"getCivitatisTour"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DestinosCivitatis",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search\": \"cancun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/getCivitatisDestinations",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"getCivitatisDestinations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCivitatisSearch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search\": \"cancun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/civitatis/buscar",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"civitatis",
+						"buscar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actividadesCivitatis",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lang\": \"es\",\r\n    \"currency\": \"mxn\",\r\n    \"id\": \"93\",\r\n    \"sandbox\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/getActivitiesCivitatis",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"getActivitiesCivitatis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "civitatis home",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/v2/civitatis/home",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"v2",
+						"civitatis",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FinishBooking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idopenpay\":\"trfu3bpdd2jadtccixjj\",\r\n    \"cartid\":\"97NvtH6RGt1f4F4yGrNWMRvHziE\",\r\n    \"sandbox\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/reservation/tour/finishBooking",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"reservation",
+						"tour",
+						"finishBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBooking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_token\":\"n8nwLxRAuIUfgaiQI4G6vzcHDvVpTmHO1ZnVZcPc\",\r\n    \"sandbox\":true,\r\n    \"cartid\":\"fgbbDAzoiiaOycERQ4DURO0b9G2\",\r\n    \"gtotal\":\"254.09\",\r\n    \"idformulario\":\"65aafa4510b0f5.92908064\",\r\n    \"nombretour\":\"Ferry a Canc\\u00fan\",\r\n    \"campo\":[\"0\",null,null],\r\n    \"cantidad\":[\"1\",null,null],\r\n\r\n    \"totalConCupon\":\"298.93\",\r\n    \"totalConCuponTable\":\"254.09\",\r\n\r\n\r\n    \"nombre\":\"Bernardo\",\r\n    \"apellido\":\"Dominguez\",\r\n    \"telefono\":\"9983512739\",\r\n    \"sexoTitular\":\"M\",\r\n    \"dianacTitular\":\"15\",\r\n    \"mesnacTitular\":\"9\",\r\n    \"yearTitular\":\"1986\",\r\n    \"valueField\":[\"Test de reserva\"],\r\n    \"idField\":[\"comentarios-65aafa4510b0f5.92908064\"],\r\n    \"email\":\"programador2@bookingtech.mx\",\r\n    \"cupon\":\"2024cu\",\r\n    \"openpayLINK\":\"https:\\/\\/sandbox-api.openpay.mx\\/v1\\/mqshhjoezxuidbfu2vs1\\/charges\\/trrinih4lrh8ubiwkitm\\/card_capture\",\r\n    \"openpayID\":\"trrinih4lrh8ubiwkitm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/reservation/tour/addBooking",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"reservation",
+						"tour",
+						"addBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarActividad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search\": \"xcaret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/api/civitatis/buscar",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"api",
+						"civitatis",
+						"buscar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

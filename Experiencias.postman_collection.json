@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "ac8ccf34-9ff1-4f45-9b22-41588d47ac2e",
+		"name": "Experiencias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30332828",
+		"_collection_link": "https://solar-moon-561343.postman.co/workspace/BookingTech~3b249508-233e-4472-b308-cd8564404144/collection/25724421-ac8ccf34-9ff1-4f45-9b22-41588d47ac2e?action=share&source=collection_link&creator=30332828"
+	},
+	"item": [
+		{
+			"name": "obtenerCategorias",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/api/categories",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "otrasExperiencias",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": \"461,509\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/toursOthers",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"toursOthers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerPrecios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/prices?tour=39&dias=1&fecha=2023-02-25",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"prices"
+					],
+					"query": [
+						{
+							"key": "tour",
+							"value": "39"
+						},
+						{
+							"key": "dias",
+							"value": "1"
+						},
+						{
+							"key": "fecha",
+							"value": "2023-02-25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "experienciasHome",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/toursHome",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"toursHome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detalleExperiencia",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{path}}/tours?tour=25",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"tours"
+					],
+					"query": [
+						{
+							"key": "tour",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "experienciasRelacionadas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idexcursion\": 39,\r\n    \"categorias\" : \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/relatedTours",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"relatedTours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "experienciasListado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "84|mxN8Uxqpj1iFJjb8QmkGePud5aMnO1bWT8w5YagB7749d400",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/tours",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"tours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "experienciasPorCategoria",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/tours-categories?id=133",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"tours-categories"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "133"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postReservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_fecha\":\"13\",\"id_promocion\":\"4\",\"fecha_inicio\":\"2023-04-03\",\"fecha_fin\":\"2023-04-10\",\"id_paquete\":\"41\",\"tipohabitacion\":\"dbl\",\"idpromo_frm\":\"4\",\"aplica_promo\":\"\",\"idexpromo\":\"6\",\"tipo_descuento\":\"1\",\"valor_promocion\":\"10.00\",\"descuento\":\"1\",\"id_temporada\":\"3\",\"nombre_temporada\":\"Alta\",\"id_clase_servicio\":\"1\",\"id_paquete_fecha\":\"13\",\"id_temporada_costo\":\"33\",\"cantidad_adultos\":\"2\",\"cantidad_menores\":\"0\",\"cantidad_infantes\":\"0\",\"precio_adultos\":\"21000\",\"precio_menores\":\"18000\",\"precio_infantes\":\"15000\",\"precio_total\":\"42000\",\"id_afiliado\":0,\"id_forma_pago\":9,\"id_moneda\":2,\"pagado\":0,\"tit_nombre\":\"Claudia Ivett\",\"tit_apellido\":\"Ayala Tzab\",\"tit_telefono\":\"9987654321\",\"tit_email\":\"claudia@innplo.com\",\"tit_fec_nac\":\"1985-9-16\",\"paxesAdultos\":[{\"nombre\":\"Carmen\",\"apellido\":\"Flores Quevedo\",\"fecha_nacimiento\":\"1978\\/1\\/27\"}],\"paxesMenores\":0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/v2/experiencias/agregarReservacion",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"v2",
+						"experiencias",
+						"agregarReservacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TiposExcursion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{llave}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/experiencias/tipos-excursion",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"experiencias",
+						"tipos-excursion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
